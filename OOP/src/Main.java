@@ -6,3 +6,6 @@ public class Main {
 
     }
 }
+
+//Programming exercise:
+//One Minute
