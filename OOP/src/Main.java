@@ -3,8 +3,31 @@
 public class Main {
     public static void main(String[] args) {
 
-        Book haripota = new Book("J.K Rowling","Harry Potter",1000);
-        System.out.println(haripota);
+        Fitbyte assistant = new Fitbyte(30, 60);
+
+        double percantage = 0.3;
+        while(percantage < 1.0){
+
+            double target = assistant.targetHeartRate(percantage);
+            System.out.println("Target is "+percantage*100+"% , of maximum "+target);
+
+            percantage += 0.1;
+        }
+
+
+//        Cube oSheaJackson = new Cube(4);
+//        System.out.println(oSheaJackson.volume());
+//        System.out.println(oSheaJackson);
+//
+//        System.out.println();
+//
+//        Cube salt = new Cube(2);
+//        System.out.println(salt.volume());
+//        System.out.println(salt);
+
+
+//        Book haripota = new Book("J.K Rowling","Harry Potter",1000);
+//        System.out.println(haripota);
 
 
 //        Timer timer = new Timer();
