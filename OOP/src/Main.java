@@ -3,15 +3,22 @@
 public class Main {
     public static void main(String[] args) {
 
-        Fitbyte assistant = new Fitbyte(30, 60);
+        Product test = new Product("test");
 
-        double percantage = 0.3;
-        while(percantage < 1.0){
+//        System.out.println(tapeMeasure);
+//        System.out.println(plaster);
+//        System.out.println(tyre);
 
-            double target = assistant.targetHeartRate(percantage);
-            System.out.println("Target is "+percantage*100+"% , of maximum "+target);
 
-            percantage += 0.1;
+//        Fitbyte assistant = new Fitbyte(30, 60);
+//
+//        double percantage = 0.3;
+//        while(percantage < 1.0){
+//
+//            double target = assistant.targetHeartRate(percantage);
+//            System.out.println("Target is "+percantage*100+"% , of maximum "+target);
+//
+//            percantage += 0.1;
         }
 //https://java-programming.mooc.fi/part-5/2-method-and-constructor-overloading
 
