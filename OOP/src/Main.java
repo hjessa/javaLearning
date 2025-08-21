@@ -3,7 +3,27 @@
 public class Main {
     public static void main(String[] args) {
 
-        Product test = new Product("test");
+        Counter test = new Counter(5);
+        Counter test2 = new Counter();
+
+        test.decrease();
+        test.decrease(2);
+        test2.increase();
+        test2.increase(2);
+
+        System.out.println(test.value());
+        System.out.println(test2.value());
+
+
+
+
+//        Product tapeMeasure = new Product("Tape measure");
+//        Product plaster = new Product("Plaster", "home improvement section");
+//        Product tyre = new Product("Tyre", 5);
+//
+//        System.out.println(tapeMeasure);
+//        System.out.println(plaster);
+//        System.out.println(tyre);
 
 //        System.out.println(tapeMeasure);
 //        System.out.println(plaster);
@@ -50,7 +70,6 @@ public class Main {
 //            }
 //        }
     }
-}
 
-//Programming exercise:
-//One Minute
+
+//https://java-programming.mooc.fi/part-5/3-primitive-and-reference-variables

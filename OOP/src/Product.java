@@ -23,10 +23,10 @@ public class Product {
     }
 
     public Product(String name){
-        this(name,"form the shelf",1);
+        this(name,"from the shelf",1);
     }
 
     public String toString(){
-        return MessageFormat.format("{0} measure ({1}kg) can be foung {2}",this.name,this.weight,this.location);
+        return MessageFormat.format("{0} measure ({1}kg) can be found {2}",this.name,this.weight,this.location);
     }
 }
