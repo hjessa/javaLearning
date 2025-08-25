@@ -3,16 +3,39 @@
 public class Main {
     public static void main(String[] args) {
 
-        Counter test = new Counter(5);
-        Counter test2 = new Counter();
+        HealthStation childrensHospital = new HealthStation();
 
-        test.decrease();
-        test.decrease(2);
-        test2.increase();
-        test2.increase(2);
+        Person ethan = new Person("Ethan", 1, 110, 7);
+        Person peter = new Person("Peter", 33, 176, 85);
 
-        System.out.println(test.value());
-        System.out.println(test2.value());
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(peter);
+
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+    }
+}
+//        Counter test = new Counter(5);
+//        test = null;
+//        test.increase();
+//        Counter test = new Counter(5);
+//        Counter test2 = new Counter();
+//
+//        test.decrease();
+//        test.decrease(2);
+//        test2.increase();
+//        test2.increase(2);
+//
+//        System.out.println(test.value());
+//        System.out.println(test2.value());
 
 
 
@@ -39,7 +62,7 @@ public class Main {
 //            System.out.println("Target is "+percantage*100+"% , of maximum "+target);
 //
 //            percantage += 0.1;
-        }
+
 //https://java-programming.mooc.fi/part-5/2-method-and-constructor-overloading
 
 //        Cube oSheaJackson = new Cube(4);
@@ -69,7 +92,7 @@ public class Main {
 //
 //            }
 //        }
-    }
+
 
 
 //https://java-programming.mooc.fi/part-5/3-primitive-and-reference-variables

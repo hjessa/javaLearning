@@ -1,3 +1,5 @@
+import java.text.MessageFormat;
+
 public class Counter {
 
     private int value;
@@ -33,4 +35,9 @@ public class Counter {
             this.value -= decreasedBy;
         }
     }
+
+    public String toString(){
+        return MessageFormat.format("{0}",this.value);
+    }
+
 }
