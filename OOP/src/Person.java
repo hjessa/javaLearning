@@ -1,17 +1,34 @@
+import java.text.MessageFormat;
+
 public class Person {
 
     private String name;
+    private SimpleDate birthday;
+    private Pet pet;
     private int age;
     private int weight;
     private int height;
 
     public Person(String name) {
-        this(name, 0, 0, 0);
+        this(name,  0, 0);
+    }
+    public Person(String name, Pet pet){
+        this.name = name;
+        this.pet = pet;
     }
 
-    public Person(String name, int age, int height, int weight) {
+    public Person(String name, SimpleDate date){
         this.name = name;
-        this.age = age;
+        this.birthday = date;
+    }
+
+    public Person(String name, int day, int month, int year){
+        this.name = name;
+        this.birthday = new SimpleDate(day,month,year);
+    }
+
+    public Person(String name, int height, int weight) {
+        this.name = name;
         this.weight = weight;
         this.height = height;
     }
@@ -53,6 +70,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return this.name + ", age " + this.age + " years";
+        return MessageFormat.format("{0} has a friend called {1} ({2})",this.name,this.pet.getName(),this.pet.getBreed());
     }
 }
