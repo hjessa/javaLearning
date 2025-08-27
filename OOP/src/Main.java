@@ -4,10 +4,28 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Pet lucy = new Pet("Lucy", "golden retriever");
-        Person leo = new Person("Leo", lucy);
+        Song jackSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+        Song anotherSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
 
-        System.out.println(leo);
+        if (jackSparrow.equals(anotherSparrow)) {
+            System.out.println("Songs are equal.");
+        }
+
+        if (jackSparrow.equals("Another object")) {
+            System.out.println("Strange things are afoot.");
+        }
+//https://java-programming.mooc.fi/part-5/4-objects-and-references
+        //Identical twins
+//        Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
+//        Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
+//        Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
+//
+//        System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));  // false
+//        System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));   // true
+//        Pet lucy = new Pet("Lucy", "golden retriever");
+//        Person leo = new Person("Leo", lucy);
+//
+//        System.out.println(leo);
 //        Programming exercise:
 //Comparing apartments (3 parts)
 
