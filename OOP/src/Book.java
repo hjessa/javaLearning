@@ -5,11 +5,11 @@ public class Book {
     private String author;
     private String name;
     private int pages;
+    private int pubYear;
 
-    public Book(String author, String name, int pages){
-        this.author = author;
+    public Book(String name, int pubYear){
         this.name = name;
-        this.pages = pages;
+        this.pubYear = pubYear;
     }
 
     public String getAuthor(){
@@ -22,6 +22,31 @@ public class Book {
 
     public int getPages(){
         return this.pages;
+    }
+
+    public int getPubYear() {
+        return pubYear;
+    }
+
+    public boolean equals(Object obj){
+
+        if(this == obj){
+            return true;
+        }
+
+        if(!(obj instanceof Book)){
+            return false;
+        }
+
+        Book object = (Book) obj;
+
+        if(this.name.equals(object.name) && this.pubYear == object.pubYear){
+            return true;
+        }
+        else {
+            return false;
+        }
+
     }
 
     public String toString() {

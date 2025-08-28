@@ -22,6 +22,27 @@ public class SimpleDate {
         return this.year;
     }
 
+    public boolean equals(Object obj){
+
+        if(this == obj){
+            return true;
+        }
+
+        if(!(obj instanceof SimpleDate)){
+            return false;
+        }
+
+        SimpleDate object = (SimpleDate) obj;
+
+        if(this.day == object.day && this.month == object.month && this.year == object.year){
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
+
     @Override
     public String toString() {
         return this.day + "." + this.month + "." + this.year;

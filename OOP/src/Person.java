@@ -22,6 +22,13 @@ public class Person {
         this.birthday = date;
     }
 
+    public Person(String name, SimpleDate date, int weight, int height){
+        this.name = name;
+        this.birthday = date;
+        this.weight = weight;
+        this.height = height;
+    }
+
     public Person(String name, int day, int month, int year){
         this.name = name;
         this.birthday = new SimpleDate(day,month,year);
@@ -66,6 +73,27 @@ public class Person {
     public double bodyMassIndex() {
         double heightPerHundred = this.height / 100.0;
         return this.weight / (heightPerHundred * heightPerHundred);
+    }
+
+    public boolean equals(Object obj){
+
+        if(this == obj){
+            return true;
+        }
+
+        if(!(obj instanceof Person)){
+            return false;
+        }
+
+        Person object = (Person) obj;
+
+        if(this.name.equals(object.name) && this.birthday.equals(object.birthday) && this.height == object.height && this.weight == object.weight){
+            return true;
+        }
+        else {
+            return false;
+        }
+
     }
 
     @Override

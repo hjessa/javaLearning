@@ -1,19 +1,67 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Book> books = new ArrayList<>();
 
-        Song jackSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
-        Song anotherSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+    while(true){
 
-        if (jackSparrow.equals(anotherSparrow)) {
-            System.out.println("Songs are equal.");
+        String bookName ="";
+        int pubYear = 0;
+        System.out.println("Book name:");
+        bookName = scanner.nextLine();
+        if(bookName.isEmpty()){
+            break;
+        }
+        System.out.println("Publication year: ");
+        pubYear = Integer.valueOf(scanner.nextLine());
+
+        Book tryBook = new Book(bookName,pubYear);
+        if(books.contains(tryBook)){
+            System.out.println("The book is already on the list. Let's not add the same book again.");
+        }
+        else{
+            books.add(new Book(bookName,pubYear));
         }
 
-        if (jackSparrow.equals("Another object")) {
-            System.out.println("Strange things are afoot.");
-        }
+    }
+
+
+//        Programming exercise:
+//          Archive (2 parts)
+        // https://java-programming.mooc.fi/part-5/4-objects-and-references
+//        SimpleDate date = new SimpleDate(24, 3, 2017);
+//        SimpleDate date2 = new SimpleDate(23, 7, 2017);
+//
+//        Person leo = new Person("Leo", date, 62, 9);
+//        Person lily = new Person("Lily", date2, 65, 8);
+//        Person lily2 = new Person("Lily", date2, 65, 8);
+//
+//        if (lily2.equals(lily)) {
+//            System.out.println("Is this quite correct?");
+//        }
+//
+//        Person leoWithDifferentWeight = new Person("Leo", date, 62, 10);
+//
+//        if (leo.equals(leoWithDifferentWeight)) {
+//            System.out.println("Is this quite correct?");
+//        }
+
+//        Song jackSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+//        Song anotherSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+//
+//        if (jackSparrow.equals(anotherSparrow)) {
+//            System.out.println("Songs are equal.");
+//        }
+//
+//        if (jackSparrow.equals("Another object")) {
+//            System.out.println("Strange things are afoot.");
+//        }
 //https://java-programming.mooc.fi/part-5/4-objects-and-references
         //Identical twins
 //        Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
