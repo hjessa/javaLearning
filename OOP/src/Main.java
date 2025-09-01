@@ -6,30 +6,44 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<Book> books = new ArrayList<>();
 
-    while(true){
+        ArchiveOps archiwum = new ArchiveOps();
 
-        String bookName ="";
-        int pubYear = 0;
-        System.out.println("Book name:");
-        bookName = scanner.nextLine();
-        if(bookName.isEmpty()){
-            break;
-        }
-        System.out.println("Publication year: ");
-        pubYear = Integer.valueOf(scanner.nextLine());
 
-        Book tryBook = new Book(bookName,pubYear);
-        if(books.contains(tryBook)){
-            System.out.println("The book is already on the list. Let's not add the same book again.");
-        }
-        else{
-            books.add(new Book(bookName,pubYear));
+        archiwum.addToArchiveList();
+
+        System.out.println("==Items==");
+        for (Archive archive : archiwum) {
+            System.out.println(archive);
         }
 
-    }
+
+//https://java-programming.mooc.fi/part-5/4-objects-and-references
+//Object as a method's return value
+//        Scanner scanner = new Scanner(System.in);
+//        ArrayList<Book> books = new ArrayList<>();
+//
+//    while(true){
+//
+//        String bookName ="";
+//        int pubYear = 0;
+//        System.out.println("Book name:");
+//        bookName = scanner.nextLine();
+//        if(bookName.isEmpty()){
+//            break;
+//        }
+//        System.out.println("Publication year: ");
+//        pubYear = Integer.valueOf(scanner.nextLine());
+//
+//        Book tryBook = new Book(bookName,pubYear);
+//        if(books.contains(tryBook)){
+//            System.out.println("The book is already on the list. Let's not add the same book again.");
+//        }
+//        else{
+//            books.add(new Book(bookName,pubYear));
+//        }
+//
+//    }
 
 
 //        Programming exercise:
