@@ -7,15 +7,69 @@ public class Main {
     public static void main(String[] args) {
 
 
-        ArchiveOps archiwum = new ArchiveOps();
+        Money a = new Money(10, 0);
+        Money b = new Money(3, 50);
+
+        Money c = a.minus(b);
+
+        System.out.println(a);  // 10.00e
+        System.out.println(b);  // 3.50e
+        System.out.println(c);  // 6.50e
+
+        c = c.minus(a);       // NB: a new Money object is created, and is placed "at the end of the strand connected to c"
+//  the old 6.5 euros at the end of the strand disappears and the Java garbage collector takes care of it
 
 
-        archiwum.addToArchiveList();
+        System.out.println(a);  // 10.00e
+        System.out.println(b);  // 3.50e
+        System.out.println(c);  // 0.00e
+//        Money a = new Money(10, 0);
+//        Money b = new Money(3, 0);
+//        Money c = new Money(5, 0);
+//
+//        System.out.println(a.lessThan(b));  // false
+//        System.out.println(b.lessThan(c));  // true
+//        Money a = new Money(10,0);
+//        Money b = new Money(5,0);
+//
+//        Money c = a.plus(b);
+//
+//        System.out.println(a);  // 10.00e
+//        System.out.println(b);  // 5.00e
+//        System.out.println(c);  // 15.00e
+//
+//        a = a.plus(c);          // NB: a new Money object is created, and is placed "at the end of the strand connected to a"
+////  the old 10 euros at the end of the strand disappears and the Java garbage collector takes care of it
+//
+//        System.out.println(a);  // 25.00e
+//        System.out.println(b);  // 5.00e
+//        System.out.println(c);  // 15.00e
 
-        System.out.println("==Items==");
-        for (Archive archive : archiwum) {
-            System.out.println(archive);
-        }
+//        SimpleDate date = new SimpleDate(13, 2, 2015);
+//        System.out.println("Friday of the examined week is " + date);
+//
+//        SimpleDate newDate = date.afterNumberOfDays(7);
+//        int week = 1;
+//        while (week <= 7) {
+//            System.out.println("Friday after " + week + " weeks is " + newDate);
+//            newDate = newDate.afterNumberOfDays(7);
+//
+//            week = week + 1;
+//        }
+//
+//
+//        System.out.println("The date after 790 days from the examined Friday is ... try it out yourself!");
+        //    System.out.println("Try " + date.afterNumberOfDays(790));
+
+//        ArchiveOps archiwum = new ArchiveOps();
+//
+//
+//        archiwum.addToArchiveList();
+//
+//        System.out.println("==Items==");
+//        for (Archive archive : archiwum) {
+//            System.out.println(archive);
+//        }
 
 
 //https://java-programming.mooc.fi/part-5/4-objects-and-references

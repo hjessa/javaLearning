@@ -1,0 +1,3 @@
+https://java-programming.mooc.fi/part-5/4-objects-and-references
+
+Object as a method's return value

@@ -43,6 +43,55 @@ public class SimpleDate {
 
     }
 
+    public void advance(){
+        if(this.day == 30){
+            this.month +=1;
+            this.day = 1;
+        }
+        else{
+            this.day += 1;
+        }
+    }
+
+    public void advance(int howManyDays){
+        int counter = 0;
+        if(howManyDays > 0){
+            while(counter < howManyDays) {
+                this.advance();
+                counter++;
+            }
+        }
+    }
+
+    public SimpleDate afterNumberOfDays(int days){
+
+        SimpleDate clone = new SimpleDate(this.day,this.month,this.year);
+        clone.advance(days);
+        return clone;
+    }
+
+    public boolean before(SimpleDate compared) {
+        // first compare years
+        if (this.year < compared.year) {
+            return true;
+        }
+
+        // if the years are the same, compare months
+        if (this.year == compared.year && this.month < compared.month) {
+            return true;
+        }
+
+        // the years and the months are the same, compare days
+        if (this.year == compared.year && this.month == compared.month &&
+                this.day < compared.day) {
+            return true;
+        }
+
+        return false;
+    }
+
+
+
     @Override
     public String toString() {
         return this.day + "." + this.month + "." + this.year;
