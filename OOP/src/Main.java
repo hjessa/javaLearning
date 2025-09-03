@@ -6,23 +6,63 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        MessageService service = new MessageService();
 
-        Money a = new Money(10, 0);
-        Money b = new Money(3, 50);
+        // Tworzymy kilka wiadomości
+        Message m1 = new Message("Janek", "Cześć, co tam?");
+        Message m2 = new Message("Kasia", "Długa wiadomość...".repeat(30)); // będzie za długa
+        Message m3 = new Message("Ola", "Dzisiaj piękna pogoda!");
 
-        Money c = a.minus(b);
+        // Dodajemy do serwisu
+        service.addMessage(m1);
+        service.addMessage(m2); // ta się nie doda, bo > 280 znaków
+        service.addMessage(m3);
 
-        System.out.println(a);  // 10.00e
-        System.out.println(b);  // 3.50e
-        System.out.println(c);  // 6.50e
+        // Pobieramy i wyświetlamy wszystkie wiadomości
+        for (Message msg : service.getMessages()) {
+            System.out.println(msg.getSender() + ": " + msg.getContent());
+        }
 
-        c = c.minus(a);       // NB: a new Money object is created, and is placed "at the end of the strand connected to c"
-//  the old 6.5 euros at the end of the strand disappears and the Java garbage collector takes care of it
+//        Stack s = new Stack();
+//        s.add("1");
+//        s.add("2");
+//        s.add("3");
+//        s.add("4");
+//        s.add("5");
+//
+//        while (!s.isEmpty()) {
+//            System.out.println(s.take());
+//        }
 
+//        Menu menu = new Menu();
+//        menu.addMeal("Tofu ratatouille");
+//        menu.addMeal("Chilli coconut chicken");
+//        menu.addMeal("Chilli coconut chicken");
+//        menu.addMeal("Meatballs with mustard sauce");
+//
+//        menu.printMeals();
+//        menu.clearMenu();
+//
+//        System.out.println();
+//        menu.addMeal("Tomato and mozzarella salad");
+//        menu.printMeals();
 
-        System.out.println(a);  // 10.00e
-        System.out.println(b);  // 3.50e
-        System.out.println(c);  // 0.00e
+//        Money a = new Money(10, 0);
+//        Money b = new Money(3, 50);
+//
+//        Money c = a.minus(b);
+//
+//        System.out.println(a);  // 10.00e
+//        System.out.println(b);  // 3.50e
+//        System.out.println(c);  // 6.50e
+//
+//        c = c.minus(a);       // NB: a new Money object is created, and is placed "at the end of the strand connected to c"
+////  the old 6.5 euros at the end of the strand disappears and the Java garbage collector takes care of it
+//
+//
+//        System.out.println(a);  // 10.00e
+//        System.out.println(b);  // 3.50e
+//        System.out.println(c);  // 0.00e
 //        Money a = new Money(10, 0);
 //        Money b = new Money(3, 0);
 //        Money c = new Money(5, 0);
