@@ -5,23 +5,68 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
-        MessageService service = new MessageService();
-
-        // Tworzymy kilka wiadomości
-        Message m1 = new Message("Janek", "Cześć, co tam?");
-        Message m2 = new Message("Kasia", "Długa wiadomość...".repeat(30)); // będzie za długa
-        Message m3 = new Message("Ola", "Dzisiaj piękna pogoda!");
-
-        // Dodajemy do serwisu
-        service.addMessage(m1);
-        service.addMessage(m2); // ta się nie doda, bo > 280 znaków
-        service.addMessage(m3);
-
-        // Pobieramy i wyświetlamy wszystkie wiadomości
-        for (Message msg : service.getMessages()) {
-            System.out.println(msg.getSender() + ": " + msg.getContent());
-        }
+        Gift book = new Gift("Harry Potter and the Philosopher's Stone", 1);
+        Gift book2 = new Gift("nie wiem cos tam", 20);
+        Package gifts = new Package();
+        gifts.addGift(book);
+        gifts.addGift(book2);
+        System.out.println(gifts.totalWeight());
+//        Gift book = new Gift("Harry Potter and the Philosopher's Stone", 2);
+//
+//        System.out.println("Gift's name: " + book.getName());
+//        System.out.println("Gift's weight: " + book.getWeight());
+//
+//        System.out.println("Gift: " + book);
+//        SimpleCollection s = new SimpleCollection("characters");
+//        System.out.println(s);
+//
+//        System.out.println();
+//
+//        s.add("magneto");
+//        System.out.println(s);
+//
+//        System.out.println();
+//
+//        s.add("mystique");
+//        System.out.println(s);
+//
+//        System.out.println();
+//
+//        s.add("phoenix");
+//        System.out.println(s);
+//        SimpleCollection s = new SimpleCollection("alphabet");
+//        System.out.println(s);
+//
+//        System.out.println();
+//
+//        s.add("a");
+//        System.out.println(s);
+//
+//        System.out.println();
+//
+//        s.add("b");
+//        System.out.println(s);
+//
+//        System.out.println();
+//
+//        s.add("c");
+//        System.out.println(s);
+//        MessageService service = new MessageService();
+//
+//        // Tworzymy kilka wiadomości
+//        Message m1 = new Message("Janek", "Cześć, co tam?");
+//        Message m2 = new Message("Kasia", "Długa wiadomość...".repeat(30)); // będzie za długa
+//        Message m3 = new Message("Ola", "Dzisiaj piękna pogoda!");
+//
+//        // Dodajemy do serwisu
+//        service.addMessage(m1);
+//        service.addMessage(m2); // ta się nie doda, bo > 280 znaków
+//        service.addMessage(m3);
+//
+//        // Pobieramy i wyświetlamy wszystkie wiadomości
+//        for (Message msg : service.getMessages()) {
+//            System.out.println(msg.getSender() + ": " + msg.getContent());
+//        }
 
 //        Stack s = new Stack();
 //        s.add("1");
