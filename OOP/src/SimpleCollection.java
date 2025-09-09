@@ -41,4 +41,22 @@ public class SimpleCollection {
         return output + elements;
     }
 
+    public String longest(){
+
+        if(this.collection.isEmpty()){
+            return null;
+        }
+
+        String longest = this.collection.get(0);
+
+        for (String s : collection) {
+
+            if(s.length() > longest.length()){
+                longest = s;
+            }
+        }
+
+        return longest;
+    }
+
 }

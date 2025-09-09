@@ -40,6 +40,11 @@ public class Person {
         this.height = height;
     }
 
+    public Person(String name, int height){
+        this.name = name;
+        this.height = height;
+    }
+
     // other constructors and methods
 
     public String getName() {
@@ -98,6 +103,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return MessageFormat.format("{0} has a friend called {1} ({2})",this.name,this.pet.getName(),this.pet.getBreed());
+        return MessageFormat.format("{0} ({1})",this.name,this.height);
+//        return MessageFormat.format("{0} has a friend called {1} ({2})",this.name,this.pet.getName(),this.pet.getBreed());
     }
 }
