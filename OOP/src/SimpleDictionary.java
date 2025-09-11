@@ -14,7 +14,10 @@ public class SimpleDictionary {
     }
 
     public String translate(String word){
-        return translations.get(word);
+        if(translations.get(word) == null){
+            return "Word "+word+" was not found";
+        }
+        return "Translation: "+translations.get(word);
     }
 
 }
