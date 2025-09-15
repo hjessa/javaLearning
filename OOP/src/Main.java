@@ -5,13 +5,38 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
+        TodoList list = new TodoList();
         Scanner scanner = new Scanner(System.in);
-        SimpleDictionary dictionary = new SimpleDictionary();
 
-        TextUI textUI = new TextUI(scanner, dictionary);
-        textUI.start();
-        System.out.println(dictionary.translate("pike")); // prints the string "hauki"
+        UserInterface ui = new UserInterface(list,scanner);
+        ui.start();
+//        list.add("read the course material");
+//        list.add("watch the latest fool us");
+//        list.add("take it easy");
+//        list.print();
+//        list.remove(2);
+//        list.print();
+//        list.add("buy raisins");
+//        list.print();
+//        list.remove(1);
+//        list.remove(1);
+//        list.print();
+//        TodoList list = new TodoList();
+//        list.add("read the course material");
+//        list.add("watch the latest fool us");
+//        list.add("take it easy");
+//
+//        list.print();
+//        list.remove(2);
+//
+//        System.out.println();
+//        list.print();
+//        Scanner scanner = new Scanner(System.in);
+//        SimpleDictionary dictionary = new SimpleDictionary();
+//
+//        TextUI textUI = new TextUI(scanner, dictionary);
+//        textUI.start();
+//        System.out.println(dictionary.translate("pike")); // prints the string "hauki"
 //        Scanner scanner = new Scanner(System.in);
 //        SimpleDictionary dictionary = new SimpleDictionary();
 //

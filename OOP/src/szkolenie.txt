@@ -1,4 +1,4 @@
 https://java-programming.mooc.fi/part-6/2-separating-user-interface-from-program-logic
 
-zadanie ze słownikiem
-Adding a translation
+Programming exercise:
+Averages (3 parts)

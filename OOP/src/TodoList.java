@@ -12,5 +12,13 @@ public class TodoList {
         this.list.add(task);
     }
 
-    public
+    public void remove(int taskNum){
+        this.list.remove(taskNum-1);
+    }
+
+    public void print(){
+        for (String s : list) {
+            System.out.println((list.indexOf(s)+1)+": "+s);
+        }
+    }
 }
