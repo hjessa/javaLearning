@@ -1,15 +1,52 @@
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        TodoList list = new TodoList();
+        JokeManager manager = new JokeManager();
         Scanner scanner = new Scanner(System.in);
 
-        UserInterface ui = new UserInterface(list,scanner);
+        UserInterfaceJokes ui = new UserInterfaceJokes(manager, scanner);
         ui.start();
+//        JokeManager manager = new JokeManager();
+//        manager.addJoke("What is red and smells of blue paint? - Red paint.");
+//        manager.addJoke("What is blue and smells of red paint? - Blue paint.");
+//
+//        System.out.println("Drawing jokes:");
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println(manager.drawJokes());
+//        }
+//
+//        System.out.println("");
+//        System.out.println("Printing jokes:");
+//        manager.printJokes();
+//
+       }
+//        GradeRegister register = new GradeRegister();
+//        Scanner scanner = new Scanner(System.in);
+//
+//        UserInterfaceGrades uig = new UserInterfaceGrades(register,scanner);
+//        uig.start();
+//        register.addGradeBasedOnPoints(93);
+//        register.addGradeBasedOnPoints(91);
+//        register.addGradeBasedOnPoints(92);
+//
+//        System.out.println(register.averageOfPoints());
+//        GradeRegister register = new GradeRegister();
+//        register.addGradeBasedOnPoints(93);
+//        register.addGradeBasedOnPoints(91);
+//        register.addGradeBasedOnPoints(92);
+//        register.addGradeBasedOnPoints(88);
+//
+//        System.out.println(register.averageOfGrades());
+//        TodoList list = new TodoList();
+//        Scanner scanner = new Scanner(System.in);
+//
+//        UserInterface ui = new UserInterface(list,scanner);
+//        ui.start();
 //        list.add("read the course material");
 //        list.add("watch the latest fool us");
 //        list.add("take it easy");
@@ -448,8 +485,8 @@ public class Main {
 //        wasSuccessful = petesCard.takeMoney(4);
 //        System.out.println("successfully withdrew: " + wasSuccessful);
 //        System.out.println("money " + petesCard.balance());
-    }
 }
+
 
 
 //        HealthStation childrensHospital = new HealthStation();
