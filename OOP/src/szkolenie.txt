@@ -1,1 +1,6 @@
 https://java-programming.mooc.fi/part-6/3-introduction-to-testing
+
+//Pobrać jakieś testy jednostkowe do IntelliJ
+//Napisać test a potem funkcjonalnosc do programu:
+//Dodaje nowe zadania do listy
+//Sprawdza czy sa zakonczone, konczy je ExcerciseManagement (class)
